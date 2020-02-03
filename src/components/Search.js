@@ -13,8 +13,6 @@ function Search() {
     searchGifs(inputState).then(response => {
       setImagesState(
         response.data.data.map(image => {
-          console.log(image);
-
           return image.images.original.webp;
         })
       );
